@@ -6,8 +6,8 @@
 </head>
 <body ng-app="reeditgam" 
 	ng-controller="mainCtrl">
-	<div ng-repeat="post in post">
-		{{post}}
+	<div ng-repeat="post in post | orderBy: '-upvotes'">
+		{{post.title}} - likes: {{post.upvotes}}
 		
 	</div>
 	<!-- CArgando librerias -->
